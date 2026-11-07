@@ -143,6 +143,7 @@ svg {
   display: inline-flex;
   align-items: center;
   gap: 10px;
+  direction: ltr;
   font-family: Manrope, sans-serif;
   font-size: 22px;
   font-weight: 800;
@@ -152,8 +153,9 @@ svg {
 }
 
 .brand svg {
-  width: 36px;
-  height: 24px;
+  width: 58px;
+  height: auto;
+  color: var(--accent);
 }
 
 .header-nav {
@@ -1051,7 +1053,8 @@ html[lang="ar"] .exp-body h3 {
 
 .small-mark svg {
   width: 34px;
-  height: 22px;
+  height: auto;
+  color: var(--accent);
 }
 
 .arch-header h2 {
@@ -1256,11 +1259,11 @@ html[lang="ar"] .footer-motto {
   }
   .brand {
     font-size: 18px;
-    gap: 6px;
+    gap: 8px;
   }
   .brand svg {
-    width: 28px;
-    height: 20px;
+    width: 48px;
+    height: auto;
   }
   .motion-control .motion-label {
     display: none;

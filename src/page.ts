@@ -312,9 +312,9 @@ export function page(locale: Locale = "en"): string {
   <a class="skip" href="#main">${isAr ? "تخطَّ إلى المحتوى الرئيسي" : "Skip to main content"}</a>
 
   <header class="header">
-    <a class="brand" href="/" aria-label="OMX Lab home">
+    <a class="brand" href="/" dir="ltr" aria-label="OMX Lab home">
       ${mark}
-      <span>OMX Lab</span>
+      <span>Lab</span>
     </a>
 
     <nav class="header-nav" aria-label="${isAr ? "التنقل الرئيسي" : "Main navigation"}">
