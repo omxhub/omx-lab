@@ -175,6 +175,8 @@ export function page(locale: Locale = "en"): string {
   const isAr = locale === "ar";
   const dir = isAr ? "rtl" : "ltr";
 
+  const canonicalUrl = isAr ? `${SITE}/?lang=ar` : `${SITE}/`;
+
   const metaTitle = isAr
     ? "OMX Lab — من فكرة إلى حقيقة | مختبر الرسوميات التفاعلية WebGL"
     : "OMX Lab — Ideas Into Reality | Autonomous 3D & Interactive WebGL Lab";
@@ -182,6 +184,10 @@ export function page(locale: Locale = "en"): string {
   const metaDesc = isAr
     ? "مختبر OMX للتجارب البصرية ثلاثية الأبعاد والشيدرز الفورية (WebGL GLSL). استكشف تجربة اليوم ٠١: طاقة الكوبالت التفاعلية بتقنية تتبع الأشعة."
     : "OMX Lab is an autonomous 3D, WebGL GLSL, and interactive shader laboratory. Explore Day 01 (EXP-001): Morphogenic Cobalt Singularity in real time.";
+
+  const ogAlt = isAr
+    ? "OMX Lab — من فكرة إلى حقيقة. مختبر الرسوميات التفاعلية الثلاثية الأبعاد مع شيدر طاقة الكوبالت التفاعلية بتقنية تتبع الأشعة WebGL GLSL."
+    : "OMX Lab — Ideas Into Reality. Autonomous 3D & Interactive WebGL Lab showcasing EXP-001 Morphogenic Cobalt Singularity GLSL raymarched shader.";
 
   const modes = [
     {
@@ -280,7 +286,7 @@ export function page(locale: Locale = "en"): string {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${esc(metaTitle)}</title>
   <meta name="description" content="${esc(metaDesc)}">
-  <link rel="canonical" href="${SITE}/">
+  <link rel="canonical" href="${canonicalUrl}">
   <meta name="robots" content="index,follow">
   <link rel="llms-txt" href="/llms.txt">
   ${alternates}
@@ -302,10 +308,17 @@ export function page(locale: Locale = "en"): string {
   <meta property="og:site_name" content="OMX Lab">
   <meta property="og:title" content="${esc(metaTitle)}">
   <meta property="og:description" content="${esc(metaDesc)}">
-  <meta property="og:url" content="${SITE}/">
+  <meta property="og:url" content="${canonicalUrl}">
+  <meta property="og:image" content="${SITE}/og-default.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="${esc(ogAlt)}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${esc(metaTitle)}">
   <meta name="twitter:description" content="${esc(metaDesc)}">
+  <meta name="twitter:image" content="${SITE}/og-default.png">
+  <meta name="twitter:image:alt" content="${esc(ogAlt)}">
   <script type="application/ld+json">${structuredData(locale)}</script>
 </head>
 <body>
