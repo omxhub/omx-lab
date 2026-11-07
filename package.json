@@ -1,0 +1,19 @@
+{
+  "name": "omx-lab",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "build": "wrangler deploy --dry-run --outdir dist",
+    "typecheck": "tsc --noEmit",
+    "generate:favicon-ico": "node scripts/generate-favicon-ico.mjs",
+    "generate:apple-icon": "node scripts/generate-apple-icon.mjs"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260905.1",
+    "@playwright/test": "^1.63.0",
+    "typescript": "^7.0.2",
+    "wrangler": "^4.125.0"
+  }
+}

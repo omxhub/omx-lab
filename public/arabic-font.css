@@ -1,0 +1,30 @@
+/* The OMX Arabic face (Tajawal), shared by both locales: /ar/ sets it for the
+   whole page, the English header needs it for the العربية switch label.
+   Only the Arabic subsets ship; Latin stays on Manrope. The declared range is
+   the Arabic blocks of the Google subset (the mathematical-symbol planes of the
+   upstream range are excluded: no copy uses them). */
+@font-face {
+  font-family: Tajawal;
+  src: url("/fonts/tajawal-arabic-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
+}
+@font-face {
+  font-family: Tajawal;
+  src: url("/fonts/tajawal-arabic-500-normal.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
+}
+@font-face {
+  font-family: Tajawal;
+  src: url("/fonts/tajawal-arabic-700-normal.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
+}
+#lang-switch[lang="ar"] {
+  font-family: Tajawal, var(--font);
+  font-weight: 500;
+}
